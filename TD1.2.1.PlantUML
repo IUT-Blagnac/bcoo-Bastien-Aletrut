@@ -24,4 +24,5 @@ class enseignant{
 }
 enseignant "0..*" -- "1..*" cours
 étudiants "0..*" -- "1..*" cours
+examens "1" -- "1" cours
 @enduml
