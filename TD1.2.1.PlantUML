@@ -1,1 +1,27 @@
-
+@startuml
+class étudiants{
+ numEtu
+ nom
+ prénom
+ date de naissance
+}
+étudiants "0..*" -- "1..*" examens
+(étudiants, examens) . notes
+class notes{
+nb
+}
+class cours{
+ titre
+ code du module
+}
+class examens{
+ date 
+ coefficient
+}
+class enseignant{
+ nom
+ prénom
+}
+enseignant "0..*" -- "1..*" cours
+étudiants "0..*" -- "1..*" cours
+@enduml
