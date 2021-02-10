@@ -1,1 +1,16 @@
-
+@startuml Ordinateurs portables
+class portable{
+ prix d’achat
+ valeur actuelle
+}
+class clavier{
+ type "azerty" ou "querty"
+ touches
+}
+class propriétaire{
+ nom
+ prénom
+}
+portable "1..*" -- "0..*" propriétaire
+clavier "1" -- "1" portable
+@enduml
