@@ -1,1 +1,30 @@
+@startuml
 
+class Stage{
+date 
+lieu
+tuteur
+theme
+}
+class Etudiant{
+nom
+prenom
+moy
+INE
+}
+class Entreprise{
+nom
+adr
+siege
+}
+class Enseignant{
+nom
+prenom
+specialité
+}
+Grtp "1..*" -- "1" Etudiant
+Grtd "1..*" -- "1" Grtp
+Etudiant "1..*" -- "0..*" Stage
+Stage "1" -- "1" Entreprise
+Stage "1..*" -- "1" Enseignant
+@enduml
